@@ -28,11 +28,20 @@ const LogoCont = styled.div`
     img{
         width: 25vw;
         height: auto;
+
+        @media (max-width: 48em) {
+            width: 100%;
+            height: 50vh;
+            object-fit: cover;
+        }
     }
+
+
 `
 
 const FooterSections = styled.footer`
     width: 80vw;
+    
 
     ul{
         list-style: none;
@@ -46,6 +55,14 @@ const FooterSections = styled.footer`
         border-top: 1px solid ${props => props.theme.text};
         border-bottom: 1px solid ${props => props.theme.text};
 
+        @media (max-width: 48em) {
+            justify-content: center;
+            flex-direction: column;
+            margin: 0.5rem;
+            margin-top: 0rem;
+            padding: 0;
+
+        }
     }
 
     li{
@@ -59,12 +76,20 @@ const FooterSections = styled.footer`
         &:hover{
             transform: scale(1,1);
         }
+
+        @media (max-width: 48em) {
+            margin: 0.5rem;
+            margin-top: 1rem;
+            padding: 0;
+            font-size: ${props => props.theme.fontmd};
+        }
     }
 `
 
 const Bottom = styled.div`
     width: 80vw;
     margin: 0 4rem;
+    padding-bottom: 1rem;
     font-size: ${props => props.theme.fontlg};
     display: flex;
     justify-content: space-between;
@@ -74,7 +99,21 @@ const Bottom = styled.div`
         text-decoration: underline;
     }
 
-   
+    @media (max-width: 64em) {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+        span{
+            transform: none !important;
+        }
+        }
+    
+    @media (max-width: 48em) {
+        font-size: ${props => props.theme.fontmd};
+        
+        }
+
 
 `
 
@@ -90,13 +129,13 @@ const Footer = () => {
                 <li>About</li>
                 <li>Productions</li>
                 <li>Available</li>
-                <li>Upcoming Litters</li>
+                <li>Future Litters</li>
                 <li>FAQ</li>
             </ul>
         </FooterSections>
         <Bottom>
             <span>&copy; {new Date().getFullYear()}. All Rights Reserved.</span>
-            <span>Site Operated and Maintained by &nbsp;
+            <span>Site Design &amp; Operation by &nbsp;
                 <a href="/" target="_blank" rel="BDMSite">
                     Biats Digital Media
                 </a>

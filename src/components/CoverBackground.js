@@ -8,17 +8,10 @@ const BackgroundContainer = styled.section`
     height: 100vh;
     position: relative;
     background-color: black;
-`
-const DarkOverlay = styled.div`
-position: absolute;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-z-index: 1;
 
-background-color:  ${props => 'rgba(${props.theme.bodyRgba},0.6)'};
+    
 `
+
 
 const Title = styled.div`
 position: absolute;
@@ -34,20 +27,28 @@ justify-content: center;
 align-items: center;
 color: ${props => props.theme.text };
 
+img{
+        
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+
+        @media (max-width: 48em) {
+            object-position: center 10%;
+            
+        }
+
+        @media (max-width: 30em) {
+            width: 100%;
+            height: 75vh;
+            object-fit: cover;
+
+            margin-top: -2rem;
+        }
+    }
+
 div{
     display:flex;
-}
-
-h1{
-    font-family: 'Kaushan Script' ;
-    font-size:${props => props.theme.fontBig};
-}
-
-h2{
-    font-family: 'Sirin Stencil' ;
-    font-size:${props => props.theme.fontlg};
-    font-weight: 300;
-    text-transform: capitalize;
 }
 
 `
@@ -55,7 +56,6 @@ h2{
 const CoverBackground = () => {
   return (
     <BackgroundContainer>
-<DarkOverlay />
 <Title>
     <div data-scroll data-scroll-delay='0.4' data-scroll-speed='2'>
         <img src={Blue_Logo} alt="" srcset=""></img>     

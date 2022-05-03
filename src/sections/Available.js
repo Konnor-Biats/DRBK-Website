@@ -21,8 +21,8 @@ const Section = styled.section`
 
 const Title = styled.h1`
     font-size: ${props => props.theme.fontxxxl};
-    font-family: 'Kaushan Script';
-    font-weight: 300;
+    font-family: 'Merriweather', serif;
+    font-weight: 500;
 
     text-shadow: 1px 1px 1px ${props => props.theme.grey};
     color: ${props => props.theme.body};
@@ -30,6 +30,17 @@ const Title = styled.h1`
     top: 1rem;
     left: 5%;
     z-index: 11;
+
+    @media (max-width: 64em) {
+        font-size: ${props => props.theme.fontxxl};
+
+
+    }
+
+    @media (max-width: 48em) {
+        font-size: ${props => props.theme.fontxl};
+
+    }
 `
 
 const Left = styled.div`
@@ -55,6 +66,26 @@ const Left = styled.div`
         margin: 0 auto;
         
 
+    }
+
+    @media (max-width: 64em) {
+        p{
+            font-size: ${props => props.theme.fontmd};
+
+        }
+    }
+    @media (max-width: 48em) {
+        width:40%;
+        p{
+            font-size: ${props => props.theme.fontsm};
+
+        }
+    }
+    @media (max-width: 30em) {
+        p{
+            font-size: ${props => props.theme.fontxs};
+
+        }
     }
 `
 
@@ -88,6 +119,39 @@ const Right = styled.div`
         margin: 0 2rem;
     }
 
+    @media (max-width: 48em) {
+        width:60em;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+
+        img{
+        /* Scale Down! */
+        width: 80%;
+        height: 80%;
+        padding-left: 0%;
+        margin-top: 10%;
+        justify-content: center;
+
+    }
+    }
+
+    @media (max-width: 30em) {
+        width:60em;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+
+        img{
+        /* Scale Down! */
+        width: 80%;
+        height: 80%;
+        padding-left: 0%;
+        margin-top: 10%;
+
+    }
+    }
 `
 
 const Box = styled.div`
@@ -121,6 +185,16 @@ background: linear-gradient(
 
     z-index: 1;
 
+    @media (max-width: 48em) {
+        position: absolute;
+        top: 25%;
+        transform: translate(-50%, -50%);
+        width:50%;
+        height: 35vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }  
     
     
 `

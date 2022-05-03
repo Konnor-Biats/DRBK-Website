@@ -17,7 +17,6 @@ const Home = () => {
   return (
     <Section>
         <CoverBackground />
-        <Logo />
         <NavBar />
     </Section>
   )

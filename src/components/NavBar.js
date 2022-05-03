@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const NavContainer = styled(motion.div)`
     width: 100vw;
     z-index: 6;
     position: absolute;
-    top: ${props => props.click ? '0' : `-${props.theme.navHeight}` };
+    top: ${props => props.click ? '0' : `-${props.theme.navHeight}`};
 
 
     display: flex;
@@ -14,6 +14,11 @@ const NavContainer = styled(motion.div)`
     align-items: center;
 
     transition: all 0.3 ease;
+
+    @media (max-width: 40em) {
+        top: ${props => props.click ? '0' : `calc(-50vh - 4rem)`};
+
+        }
 `
 
 const MenuItems = styled(motion.ul)`
@@ -29,6 +34,14 @@ const MenuItems = styled(motion.ul)`
 
     width: 100%;
     padding: 0 10rem;
+
+    @media (max-width: 40em) {
+       flex-direction: column;
+       padding: 2rem 0;
+       height: 50vh;
+        }
+
+    
 `
 
 
@@ -58,10 +71,21 @@ const MenuButton = styled.li`
 
     cursor: pointer;
 
+    @media (max-width: 40em) {
+        width: 10rem;
+        height: 2rem;
+
+        }
+
 `
 const MenuItem = styled(motion.li)`
     text-transform: uppercase;
     color: ${props => props.theme.text};
+    cursor: pointer;
+    @media (max-width: 40em) {
+       flex-direction: column;
+       padding: 0.5rem 0;
+        }
 
 `
 
@@ -70,58 +94,62 @@ const MenuItem = styled(motion.li)`
 
 const NavBar = () => {
 
-        const [click, setClick] = useState(false);
+    const [click, setClick] = useState(false);
     return (
-    <NavContainer click={click}
-        initial={{
-            y: '-100%'
-        }}
-        animate={{
-            y:0
-        }}
-        transition={{
-            duration: 2, delay:5
-        }}
-    >
-        <MenuItems
-            drag="y"
-            dragConstraints={{
-                top:0,
-                bottom:70,
+        <NavContainer click={click}
+            initial={{
+                y: '-100%'
             }}
-            dragElastic={0.05}
-            dragSnapToOrigin
+            animate={{
+                y: 0
+            }}
+            transition={{
+                duration: 2, delay: 5
+            }}
         >
-            <MenuButton onClick={() => setClick(!click)}>Menu</MenuButton>
-            <MenuItem   
-            whileHover={{scale:1.1,y:-5}}
-            whileTap={{scale:0.9, Y:0}}
-            >Home</MenuItem>
-            <MenuItem
-            whileHover={{scale:1.1,y:-5}}
-            whileTap={{scale:0.9, Y:0}}
-            >About</MenuItem>
-            <MenuItem
-            whileHover={{scale:1.1,y:-5}}
-            whileTap={{scale:0.9, Y:0}}
-            >Productions</MenuItem>
-            <MenuItem
-            whileHover={{scale:1.1,y:-5}}
-            whileTap={{scale:0.9, Y:0}}
-            >Available</MenuItem>
-            <MenuItem
-            whileHover={{scale:1.1,y:-5}}
-            whileTap={{scale:0.9, Y:0}}
-            >Uproming Litters</MenuItem>
-            <MenuItem
-            whileHover={{scale:1.1,y:-5}}
-            whileTap={{scale:0.9, Y:0}}
-            >FAQ</MenuItem>
+            <MenuItems
+                drag="y"
+                dragConstraints={{
+                    top: 0,
+                    bottom: 70,
+                }}
+                dragElastic={0.05}
+                dragSnapToOrigin
+            >
+                <MenuButton onClick={() => setClick(!click)}>Menu</MenuButton>
+                <MenuItem
+                    whileHover={{ scale: 1.1, y: -5 }}
+                    whileTap={{ scale: 0.9, Y: 0 }}
+                >Home</MenuItem>
+                <MenuItem
+                    whileHover={{ scale: 1.1, y: -5 }}
+                    whileTap={{ scale: 0.9, Y: 0 }}
+                >About</MenuItem>
+                <MenuItem
+                    whileHover={{ scale: 1.1, y: -5 }}
+                    whileTap={{ scale: 0.9, Y: 0 }}
+                >Productions</MenuItem>
+                <MenuItem
+                    whileHover={{ scale: 1.1, y: -5 }}
+                    whileTap={{ scale: 0.9, Y: 0 }}
+                >Available</MenuItem>
+                <MenuItem
+                    whileHover={{ scale: 1.1, y: -5 }}
+                    whileTap={{ scale: 0.9, Y: 0 }}
+                >Upcoming Litters</MenuItem>
+                <MenuItem
+                    whileHover={{ scale: 1.1, y: -5 }}
+                    whileTap={{ scale: 0.9, Y: 0 }}
+                >Forms</MenuItem>
+                <MenuItem
+                    whileHover={{ scale: 1.1, y: -5 }}
+                    whileTap={{ scale: 0.9, Y: 0 }}
+                >FAQ</MenuItem>
 
 
-        </MenuItems>
-    </NavContainer>
-  )
+            </MenuItems>
+        </NavContainer>
+    )
 }
 
 export default NavBar

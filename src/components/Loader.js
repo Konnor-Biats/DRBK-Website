@@ -42,21 +42,28 @@ const Title = styled(motion.div)`
     }
 
     h1{
-        font-family: 'Kaushan Script';
+        font-family: 'Merriweather', serif;
         font-size:${props => props.theme.fontBig};
         text-shadow: 1px 1px 1px ${props => props.theme.body};
+    
+        @media (max-width: 48em) {
+        font-size: ${props => props.theme.fontxxxl};
+        }
     }
 
     h2{
-        font-family: 'Sirin Stencil';
+        font-family: 'Merriweather', serif;
         font-size:${props => props.theme.fontxl};
         text-shadow: 1px 1px 1px ${props => props.theme.body};
         font-weight: 300;
         text-transform: capitalize;
+        
+        @media (max-width: 48em) {
+        font-size: ${props => props.theme.fontlg};
+        }
     }
 
 `
-
 
 
     const animation_container = {

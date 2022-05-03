@@ -13,16 +13,34 @@ const Section = styled.section`
     display: flex;
 
     margin: 0 auto;
+
+    @media (max-width: 48em) {
+       width: 90vw;
+    }
+    @media (max-width: 30em) {
+    width: 100vw;
+    }
 `
 const Title = styled.h1`
     font-size: ${props => props.theme.fontBig};
-    font-family: 'Sirin Stencil';
-    font-weight: 300;
-
+    font-family: 'Merriweather', serif;
+    font-weight: 500;
     position: absolute;
     top: 1rem;
     left: 5%;
     z-index: 5;
+
+    @media (max-width: 64em) {
+        font-size: ${props => `calc(${props.theme.fontBig} - 5vw)`};
+        top: 0;
+        left: 0;
+
+    }
+
+    @media (max-width: 48em) {
+        font-size: ${props => props.theme.fontxxxl};
+
+    }
 `
 const Left = styled.div`
     width: 50%;
@@ -31,6 +49,33 @@ const Left = styled.div`
     position: relative;
     z-index: 5;
     margin-top: 20%;
+
+
+    @media (max-width: 64em) {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 auto;
+
+    padding: 2rem;
+    font-weight: 600;
+
+    background-filter: blur(2px);
+    background-color: ${props => `rgba(${props.theme.textRgba},0.8)`};
+    border-radius: 20px;
+
+    }
+
+    @media (max-width: 48em) {
+        font-size: ${props => props.theme.fontmd};
+    }
+
+    @media (max-width: 30em) {
+        font-size: ${props => props.theme.fontsm};
+        width: 70%;
+    }
 
     h1{
         text-align: center;
@@ -51,6 +96,23 @@ const Right = styled.div`
         padding-left: 25%;
         margin-top: 40%;
 
+    }
+
+    @media (max-width: 64em) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            width: 100%;
+            height:100vh;
+            padding: 0;
+            margin: 0;
+            object-fit: cover;
+        }
+
+        
     }
 `
 const Icons = styled.div`
