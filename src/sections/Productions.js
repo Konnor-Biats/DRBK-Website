@@ -91,28 +91,25 @@ const Left = styled.div`
 const Right = styled.div`
     position: absolute;
     left: 30%;
-    padding-left: 20%;
+    padding-left: 10%;
     min-height: 100vh;
 
     background-color: ${props => props.theme.grey};
     width: 85%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    flex-direction: row;
-
-
     
     img{
-        width: 80%;
-        height: 80%;
+        width: auto;
+        height: 100%;
         padding-left: 0%;
         margin-top: 10%;
         justify-content: center;
     }
 
     h1{
-        width: 5rem;
+        width: 15rem;
         margin: 0 2rem;
     }
 
@@ -158,7 +155,7 @@ top: 50%;
 transform: translate(-50%, -50%);
 
 
-width: 70%;
+width: 80%;
 height: 65vh;
 display: flex;
 flex-direction: column;
@@ -199,7 +196,7 @@ background: linear-gradient(
     
 `
 const Males = styled.div`
-    width: 40%;
+    width: 50%;
     min-height: 75vh;
     z-index: 5;
 
@@ -211,18 +208,7 @@ const Males = styled.div`
 
 
 `
-const Females = styled.div`
-    width: 40%;
-    min-height: 75vh;
-    z-index: 5;
 
-    position: relative;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-
-`
 
 const Productions = () => {
   return (
@@ -245,19 +231,11 @@ const Productions = () => {
             <Males>
                 <Box>
                     <img src={Prod_Male} alt="" srcset=""></img>
-                    <h1>Males</h1>
+                    <h1>View All Productions</h1>
                 </Box>
             </Males>
 
-            <Females>
-                <Box>
-                    <img src={Prod_Female} alt="" srcset=""></img>
-                    <h1>Females</h1>
-                </Box>
-            </Females>
-                
-            
-                     
+           
         </Right>
         
     </Section>

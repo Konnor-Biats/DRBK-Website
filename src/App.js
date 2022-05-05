@@ -13,6 +13,7 @@ import { AnimatePresence } from "framer-motion";
 import Available from "./sections/Available";
 import Upcoming from "./sections/Upcoming";
 import Footer from "./sections/Footer";
+import FB_Feed from "./sections/FB_Feed";
 
 function App() {
   
@@ -69,6 +70,7 @@ function App() {
           <Productions />
           <Available />
           <Upcoming />
+          <FB_Feed />
           <Footer />   
         </main>
       </AnimatePresence>

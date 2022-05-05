@@ -22,7 +22,7 @@ const Section = styled.section`
     }
 `
 const Title = styled.h1`
-    font-size: ${props => props.theme.fontBig};
+    font-size: ${props => props.theme.fontxxxl};
     font-family: 'Merriweather', serif;
     font-weight: 500;
     position: absolute;
@@ -32,7 +32,7 @@ const Title = styled.h1`
 
     @media (max-width: 64em) {
         font-size: ${props => `calc(${props.theme.fontBig} - 5vw)`};
-        top: 0;
+        top: 1rem;
         left: 0;
 
     }
@@ -48,7 +48,7 @@ const Left = styled.div`
     font-weight: 300;
     position: relative;
     z-index: 5;
-    margin-top: 20%;
+    margin-top: 10%;
 
 
     @media (max-width: 64em) {
@@ -57,7 +57,7 @@ const Left = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) !important;
-    margin: 0 auto;
+    margin-top: 15%;
 
     padding: 2rem;
     font-weight: 600;
@@ -82,6 +82,11 @@ const Left = styled.div`
         font-size: ${props => props.theme.fontxl};
         font-weight: 300;
 
+        @media (max-width: 48em) {
+        font-size: ${props => props.theme.fontlg};
+    }
+
+    
     }
     
 `
@@ -91,12 +96,13 @@ const Right = styled.div`
     position: relative;
 
     img{
-        width: 75%;
+        width: 50%;
         height: auto;
         padding-left: 25%;
-        margin-top: 40%;
+        margin-top: 20%;
 
     }
+    
 
     @media (max-width: 64em) {
         width: 100%;
@@ -110,10 +116,13 @@ const Right = styled.div`
             padding: 0;
             margin: 0;
             object-fit: cover;
-        }
-
-        
+        }   
     }
+    @media (max-width: 48em) {
+        img{
+            display: none;            
+        }
+    
 `
 const Icons = styled.div`
     display: flex;
@@ -132,7 +141,12 @@ const Icons = styled.div`
         height: auto;
         align-items: center;
         justify-content: center;
-        padding-right: 5px
+        padding-right: 15px;
+
+        @media (max-width: 48em) {
+        width: 10vw;
+        height: auto;
+    }
 
     }
 `

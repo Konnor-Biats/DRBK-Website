@@ -4,15 +4,13 @@ import styled from 'styled-components'
 import Logo from '../assets/Images/Blue_Logo.webp';
 
 const Section = styled.section`
-    min-height: 100vh;
+    max-height: 80vh;
     width: 100vw;
     margin: auto;
-
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: top;
     align-items: center;
-
     background-color: ${props => props.theme.body};
     color: ${props => props.theme.text};
 
@@ -22,16 +20,15 @@ const Section = styled.section`
 const LogoCont = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: top;
     align-items: center;
-
     img{
-        width: 25vw;
+        width: 50vh;
         height: auto;
 
         @media (max-width: 48em) {
-            width: 100%;
-            height: 50vh;
+            width: 80%;
+            height: auto;
             object-fit: cover;
         }
     }
@@ -43,14 +40,15 @@ const FooterSections = styled.footer`
     width: 80vw;
     
 
+
     ul{
         list-style: none;
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        margin: 2rem;
-        margin-top: 1rem;
+        margin-bottom: 2rem;
+        margin-top: 0rem;
         padding: 0 1rem;
         border-top: 1px solid ${props => props.theme.text};
         border-bottom: 1px solid ${props => props.theme.text};
@@ -67,8 +65,8 @@ const FooterSections = styled.footer`
 
     li{
         
-        padding: 2rem;
-        font-size: ${props => props.theme.fontlg};
+        padding: 1rem;
+        font-size: ${props => props.theme.fontmd};
         text-transform: uppercase;
         cursor: pointer;
         transition: all 0.3s ease;
@@ -79,7 +77,7 @@ const FooterSections = styled.footer`
 
         @media (max-width: 48em) {
             margin: 0.5rem;
-            margin-top: 1rem;
+            margin-top: 0.5rem;
             padding: 0;
             font-size: ${props => props.theme.fontmd};
         }

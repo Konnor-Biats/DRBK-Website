@@ -227,6 +227,7 @@ const Females = styled.div`
 const Available = () => {
   return (
     <Section>
+    
         <Title>Available Dogs</Title>
         <Left>
             <p>
@@ -257,10 +258,8 @@ const Available = () => {
                 </Box>
             </Females>
                 
-            
                      
         </Right>
-        
     </Section>
   )
 }
