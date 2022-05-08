@@ -158,21 +158,19 @@ const About = () => {
            About Us
        </Title>
     <Left>
-        Background
+        <h2>Background </h2>
         <br />
-        At Done Right Bully Kennel, our puppies are raised by our family to be apart of your family.Located in Akron,Ohio, Devin and Cheyenne, strive to bring you a loyal family member who is fun loving, healthy and strong!
-        Our puppies are raised in-house,  side by side with our young children. Our puppies are registered through the ABKC and UKC.They receive daily cuddles, training socializing and weekly grooming.
-        <br />
-        <br />
-        DRBK Standard
-        <br />
-        At  DRBK we breed for health, temperment , and structure. Our goal is to produce healthy and happy companions for your family.We offer around the clock availability for any guidance or to answer any questions you may have about you new family member.
+        Done Right Bully prides themselves in their ability to raise their puppies like an extension of our own family. Located in Akron, Ohio, Devin and Cheyenne, strive to bring you a loyal family member who is fun, loving, healthy, and strong! Our puppies are raised in-house, side by side with our young children. Providing a loving atmosphere helps better familiarize our dogs with what they will be seeing once they leave us! They receive daily cuddles, training, socializing, and weekly grooming. Our puppies are registered through the ABKC and UKC.
         <br />
         <br />
-
-        Community
+        <h2>DRBK Standard</h2>
         <br />
-        We regulary attend shows.We strive to adhere to the registry standards set forth by ABKC and UKC. As a way to say thanks for the continuous support we have raffled pups. We have done and will continue to do numerous things to give back to the community.
+        At DRBK we breed for health, temperament , and structure. Our goal is to produce healthy and happy companions for your family. We offer around the clock availability for any guidance or to answer any questions you may have about you new family member.
+        <br />
+        <br />
+        <h2>Community</h2>
+        <br />
+        We regularly attend dog shows, where we strive to adhere to the registry standards set forth by ABKC and UKC. As a way to say thanks for the continuous support we organize puppy raffles and discounted rates when needed. We have done and will continue to do numerous things to give back to the community in any way we can!
         <br />
         <br />
         <h1>Follow Us on Social Media!</h1>
