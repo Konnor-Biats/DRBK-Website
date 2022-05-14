@@ -170,7 +170,7 @@ const About = () => {
         <br />
         <h2>Community</h2>
         <br />
-        We regularly attend dog shows, where we strive to adhere to the registry standards set forth by ABKC and UKC. As a way to say thanks for the continuous support we organize puppy raffles and discounted rates when needed. We have done and will continue to do numerous things to give back to the community in any way we can!
+        We regularly attend dog shows where we strive to adhere to the registry standards set forth by ABKC and UKC. As a way to say thanks for the continuous support we organize puppy raffles and discounted rates when needed. We have done and will continue to do numerous things to give back to the community in any way we can!
         <br />
         <br />
         <h1>Follow Us on Social Media!</h1>
