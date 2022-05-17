@@ -8,6 +8,8 @@ export const dark = {
 
     grey: '#bebebe',
     blue: '#0d377d',
+    black: '#000000',
+    gold: '#FFD700',
 
     //1em is 16px
     fontxs: '0.75em',

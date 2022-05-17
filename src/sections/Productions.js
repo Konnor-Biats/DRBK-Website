@@ -25,7 +25,7 @@ const Title = styled.h1`
     color: ${props => props.theme.body};
     position: absolute;
     top: 1rem;
-    left: 5%;
+    right: 5%;
     z-index: 11;
 
     @media (max-width: 64em) {
@@ -41,7 +41,7 @@ const Title = styled.h1`
 `
 
 const Left = styled.div`
-    width: 35%;
+    width: 50%;
     background-color: ${props => props.theme.text};
     color: ${props => props.theme.body};
 
@@ -54,14 +54,15 @@ const Left = styled.div`
     justify-content: center;
     align-items: center;
 
-    p{
-        font-size: ${props => props.theme.fontlg};
-        font-weight: 300;
-        width: 80%;
-        margin: 0 auto;
-        
-
+    img{
+        width: 100%;
+        height: auto%;
+        padding-left: 0%;
+        margin-top: 0%;
+        justify-content: center;
     }
+
+    
 
     @media (max-width: 64em) {
         p{
@@ -87,7 +88,7 @@ const Left = styled.div`
 
 const Right = styled.div`
     position: absolute;
-    left: 20%;
+    left: 45%;
     padding-left: 10%;
     min-height: 100vh;
 
@@ -97,12 +98,24 @@ const Right = styled.div`
     justify-content: center;
     align-items: center;
     
-    img{
-        width: 100%;
-        height: auto%;
-        padding-left: 0%;
-        margin-top: 0%;
+    p{
+        font-size: ${props => props.theme.fontlg};
+        font-weight: 300;
+        width: 80%;
+        margin: 0 auto;
+        
+       
+
+        button{
+        
+        color: ${props => props.theme.body};
+        font-size: ${props => props.theme.fontmd};
+        background-color: ${props => props.theme.text};
+        display: flex;
         justify-content: center;
+        align-items: center;
+
+        }
     }
 
     
@@ -165,21 +178,24 @@ const Males = styled.div`
 const Productions = () => {
   return (
     <Section>
-        <Title>Featured Production</Title>
+        <Title>Featured Productions</Title>
         <Left>
-            <p>
-                All DRBK produced bullies are available for purchase if all purchasing requirements are met.  
-                <br />
-                <br />
-                <br />
-                For more info on the purchase process, please visit our FAQ page!
-            </p>
+        <img src={Prod_Male} alt="" srcset=""></img>
+
+           
         </Left>
 
         <Right>
+        <p>
+        CloudConvert converts your image files online. Amongst many others, we support PNG, JPG, GIF, WEBP and HEIC. 
+                You can use the options to control image resolution, quality and file size.
+                <br />
+                <br />
+                <br />
+            <button Link to='/'>View DRBK Productions</button>
 
+            </p>
             <Males>
-                    <img src={Prod_Male} alt="" srcset=""></img>
             </Males>
 
            

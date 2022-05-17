@@ -23,7 +23,7 @@ const Section = styled.section`
 `
 const Title = styled.h1`
     font-size: ${props => props.theme.fontxxxl};
-    font-family: 'Merriweather', serif;
+    font-family: 'Kaushan Script'; 
     font-weight: 500;
     position: absolute;
     top: 1rem;
@@ -155,7 +155,7 @@ const About = () => {
   return (
     <Section>
        <Title>
-           About Us
+           About Our Team
        </Title>
     <Left>
         <h2>Background </h2>

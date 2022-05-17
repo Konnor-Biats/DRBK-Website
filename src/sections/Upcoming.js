@@ -92,12 +92,23 @@ background: linear-gradient(
     
     
 `
+
+const Test = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: ${props => props.theme.fontxxxl};
+    `
+
+
 const Upcoming = () => {
   return (
     <Section>
         <Title>UpComing Litters</Title>
         <Box>
-
+            <Test>
+            Litter Coming Soon! Check Back Later
+            </Test>
         </Box>
     </Section>
     )
