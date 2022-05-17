@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-
-import Prod_Male from '../assets/Images/dog3.jpg';
-import Prod_Female from '../assets/Images/dog2.jpg';
+import { Link } from 'react-router-dom';
+import Prod_Male from '../assets/Images/MISC IMG/Wide_Img1.jpg';
 
 
 const Section = styled.section`
@@ -21,7 +20,7 @@ const Section = styled.section`
 
 const Title = styled.h1`
     font-size: ${props => props.theme.fontxxxl};
-    font-family: 'Merriweather', serif;
+    font-family: 'Kaushan Script';
     font-weight: 500;
 
     text-shadow: 1px 1px 1px ${props => props.theme.grey};
@@ -65,9 +64,19 @@ const Left = styled.div`
         width: 80%;
         margin: 0 auto;
         
+        button{
+        
+        color: ${props => props.theme.body};
+        font-size: ${props => props.theme.fontmd};
+        background-color: ${props => props.theme.text};
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
+        }
     }
 
+    
     @media (max-width: 64em) {
         p{
             font-size: ${props => props.theme.fontmd};
@@ -91,33 +100,26 @@ const Left = styled.div`
 
 const Right = styled.div`
     position: absolute;
-    left: 30%;
-    padding-left: 20%;
+    left: 20%;
+    padding-left: 10%;
     min-height: 100vh;
 
-    background-color: ${props => props.theme.body};
-    width: 85%;
+    background-color: ${props => props.theme.text};
+    width: 80%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    flex-direction: row;
-
-
     
     img{
-        width: 80%;
-        height: 80%;
+        width: 100%;
+        height: auto;
         padding-left: 0%;
-        margin-top: 10%;
+        margin-top: 0%;
         justify-content: center;
     }
 
-    h1{
-        color: ${props => props.theme.text};
+    
 
-        width: 5rem;
-        margin: 0 2rem;
-    }
 
     @media (max-width: 48em) {
         width:60em;
@@ -154,52 +156,12 @@ const Right = styled.div`
     }
 `
 
-const Box = styled.div`
-position: absolute;
-top: 50%;
-transform: translate(-50%, -50%);
 
-
-width: 70%;
-height: 65vh;
-display: flex;
-flex-direction: column;
-align-items: center;
-
-
-
-
-background: linear-gradient(
-    to right,
-    ${props => props.theme.text} 50%,
-    ${props => props.theme.text} 50%) bottom,
-    linear-gradient(
-        to right,
-        ${props => props.theme.text} 50%,
-        ${props => props.theme.text} 50%) top;
-    
-    background-repeat: no-repeat;
-    background-size: 100% 2px;
-    border-left: 2px solid ${props => props.theme.text};
-    border-right: 2px solid ${props => props.theme.text};
-
-    z-index: 1;
-
-    @media (max-width: 48em) {
-        position: absolute;
-        top: 25%;
-        transform: translate(-50%, -50%);
-        width:50%;
-        height: 35vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }  
     
     
-`
+
 const Males = styled.div`
-    width: 40%;
+    width: 80%;
     min-height: 75vh;
     z-index: 5;
 
@@ -207,18 +169,6 @@ const Males = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-
-
-`
-const Females = styled.div`
-    width: 40%;
-    min-height: 75vh;
-    z-index: 5;
-
-    position: relative;
-    display: flex;
-    justify-content: center;
     flex-direction: column;
 
 
@@ -238,25 +188,21 @@ const Available = () => {
                 <br />
                 CloudConvert converts your image files online. Amongst many others, we support PNG, JPG, GIF, WEBP and HEIC. 
                 You can use the options to control image resolution, quality and file size.
+                <br />
+                <br />
+                <br />
+                <button Link to='/'>View Our Available Dogs</button>
+
             </p>
         </Left>
 
         <Right>
 
             <Males>
-                <Box>
-                    <img src={Prod_Male} alt="" srcset=""></img>
-                    <h1>Males</h1>
-
-                </Box>
+                    <img src={Prod_Male} alt="" srcset=""></img>                
             </Males>
 
-            <Females>
-                <Box>
-                    <img src={Prod_Female} alt="" srcset=""></img>
-                    <h1>Females</h1>
-                </Box>
-            </Females>
+            
                 
                      
         </Right>

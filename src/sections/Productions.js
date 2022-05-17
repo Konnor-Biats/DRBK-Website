@@ -1,9 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Prod_Male from '../assets/Images/dog3.jpg';
-import Prod_Female from '../assets/Images/dog2.jpg';
-
+import Prod_Male from '../assets/Images/Crypto/Crypto3.jpeg';
 
 const Section = styled.section`
     min-height: 100vh;
@@ -21,11 +19,10 @@ const Section = styled.section`
 
 const Title = styled.h1`
     font-size: ${props => props.theme.fontxxxl};
-    font-family: 'Merriweather', serif;
-    font-weight: 500;
-
-    text-shadow: 1px 1px 1px ${props => props.theme.body};
-    color: ${props => props.theme.text};
+    font-family: 'Kaushan Script'; 
+    font-weight: 300;
+    text-shadow: 1px 1px 1px ${props => props.theme.text};
+    color: ${props => props.theme.body};
     position: absolute;
     top: 1rem;
     left: 5%;
@@ -45,8 +42,8 @@ const Title = styled.h1`
 
 const Left = styled.div`
     width: 35%;
-    background-color: ${props => props.theme.body};
-    color: ${props => props.theme.text};
+    background-color: ${props => props.theme.text};
+    color: ${props => props.theme.body};
 
     min-height: 100vh;
     z-index: 5;
@@ -90,28 +87,25 @@ const Left = styled.div`
 
 const Right = styled.div`
     position: absolute;
-    left: 30%;
+    left: 20%;
     padding-left: 10%;
     min-height: 100vh;
 
-    background-color: ${props => props.theme.grey};
-    width: 85%;
+    background-color: ${props => props.theme.text};
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
     
     img{
-        width: auto;
-        height: 100%;
+        width: 100%;
+        height: auto%;
         padding-left: 0%;
-        margin-top: 10%;
+        margin-top: 0%;
         justify-content: center;
     }
 
-    h1{
-        width: 15rem;
-        margin: 0 2rem;
-    }
+    
 
 
     @media (max-width: 48em) {
@@ -149,54 +143,12 @@ const Right = styled.div`
     }
 `
 
-const Box = styled.div`
-position: absolute;
-top: 50%;
-transform: translate(-50%, -50%);
-
-
-width: 80%;
-height: 65vh;
-display: flex;
-flex-direction: column;
-align-items: center;
-
-
-
-
-background: linear-gradient(
-    to right,
-    ${props => props.theme.body} 50%,
-    ${props => props.theme.body} 50%) bottom,
-    linear-gradient(
-        to right,
-        ${props => props.theme.body} 50%,
-        ${props => props.theme.body} 50%) top;
-    
-    background-repeat: no-repeat;
-    background-size: 100% 2px;
-    border-left: 2px solid ${props => props.theme.body};
-    border-right: 2px solid ${props => props.theme.body};
-
-    z-index: 1;
-
-    @media (max-width: 48em) {
-        position: absolute;
-        top: 25%;
-        transform: translate(-50%, -50%);
-        width:50%;
-        height: 35vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }  
 
     
     
-    
-`
+
 const Males = styled.div`
-    width: 50%;
+    width: 80%;
     min-height: 75vh;
     z-index: 5;
 
@@ -213,26 +165,21 @@ const Males = styled.div`
 const Productions = () => {
   return (
     <Section>
-        <Title>DRBK Productions</Title>
+        <Title>Featured Production</Title>
         <Left>
             <p>
-                CloudConvert converts your image files online. Amongst many others, we support PNG, JPG, GIF, WEBP and HEIC. 
-                You can use the options to control image resolution, quality and file size.
+                All DRBK produced bullies are available for purchase if all purchasing requirements are met.  
                 <br />
                 <br />
                 <br />
-                CloudConvert converts your image files online. Amongst many others, we support PNG, JPG, GIF, WEBP and HEIC. 
-                You can use the options to control image resolution, quality and file size.
+                For more info on the purchase process, please visit our FAQ page!
             </p>
         </Left>
 
         <Right>
 
             <Males>
-                <Box>
                     <img src={Prod_Male} alt="" srcset=""></img>
-                    <h1>View All Productions</h1>
-                </Box>
             </Males>
 
            

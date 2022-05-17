@@ -7,6 +7,7 @@ export const dark = {
     textRgba: '255,255,255',
 
     grey: '#bebebe',
+    blue: '#0d377d',
 
     //1em is 16px
     fontxs: '0.75em',
