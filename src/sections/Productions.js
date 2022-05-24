@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Prod_Male from '../assets/Images/Crypto/Crypto3.jpeg';
+import Prod_Male from '../assets/Images/Crypto/Crypto9.PNG';
 
 const Section = styled.section`
     min-height: 100vh;
@@ -9,7 +9,6 @@ const Section = styled.section`
     width: 100vw;
     margin: 0 auto;
     overflow: hidden;
-
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -55,14 +54,85 @@ const Left = styled.div`
     align-items: center;
 
     img{
-        width: 100%;
-        height: auto%;
+        width: 80%;
+        height: auto;
         padding-left: 0%;
         margin-top: 0%;
         justify-content: center;
+    
+    
+    
+    }
+
+    @media (max-width: 48em) {
+        width:60em;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+
+        img{
+        /* Scale Down! */
+        width: 60%;
+        height: auto;
+        padding-left: 0%;
+        margin-top: 10%;
+        justify-content: center;
+
+    }
+    }
+
+    @media (max-width: 30em) {
+        width:60em;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+
+        img{
+        /* Scale Down! */
+        width: 40%;
+        height: 40%;
+        padding-left: 0%;
+        margin-top: 10%;
+
+    }
     }
 
     
+
+    
+`
+
+const Right = styled.div`
+    position: absolute;
+    left: 45%;
+    min-height: 100vh;
+
+    background-color: ${props => props.theme.grey};
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    p{
+        font-size: ${props => props.theme.fontlg};
+        font-weight: 300;
+        width: 80%;
+        margin: 0 auto;
+       
+       
+
+        button{
+        
+        color: ${props => props.theme.text};
+        font-size: ${props => props.theme.fontmd};
+        background-color: ${props => props.theme.black};
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        }
+    }
 
     @media (max-width: 64em) {
         p{
@@ -86,93 +156,10 @@ const Left = styled.div`
 
 `
 
-const Right = styled.div`
-    position: absolute;
-    left: 45%;
-    padding-left: 10%;
-    min-height: 100vh;
-
-    background-color: ${props => props.theme.text};
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    p{
-        font-size: ${props => props.theme.fontlg};
-        font-weight: 300;
-        width: 80%;
-        margin: 0 auto;
-        
-       
-
-        button{
-        
-        color: ${props => props.theme.body};
-        font-size: ${props => props.theme.fontmd};
-        background-color: ${props => props.theme.text};
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        }
-    }
-
-    
-
-
-    @media (max-width: 48em) {
-        width:60em;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-direction: row;
-
-        img{
-        /* Scale Down! */
-        width: 80%;
-        height: 80%;
-        padding-left: 0%;
-        margin-top: 10%;
-        justify-content: center;
-
-    }
-    }
-
-    @media (max-width: 30em) {
-        width:60em;
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-
-        img{
-        /* Scale Down! */
-        width: 80%;
-        height: 80%;
-        padding-left: 0%;
-        margin-top: 10%;
-
-    }
-    }
-`
-
 
     
     
 
-const Males = styled.div`
-    width: 80%;
-    min-height: 75vh;
-    z-index: 5;
-
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-
-`
 
 
 const Productions = () => {
@@ -187,16 +174,20 @@ const Productions = () => {
 
         <Right>
         <p>
-        CloudConvert converts your image files online. Amongst many others, we support PNG, JPG, GIF, WEBP and HEIC. 
+                CloudConvert converts your image files online. Amongst many others, we support PNG, JPG, GIF, WEBP and HEIC. 
                 You can use the options to control image resolution, quality and file size.
                 <br />
                 <br />
                 <br />
-            <button Link to='/'>View DRBK Productions</button>
+                CloudConvert converts your image files online. Amongst many others, we support PNG, JPG, GIF, WEBP and HEIC. 
+                You can use the options to control image resolution, quality and file size.
+                <br />
+                <br />
+                <br />
+                <button Link to='/'>View Productions</button>
 
             </p>
-            <Males>
-            </Males>
+            
 
            
         </Right>
